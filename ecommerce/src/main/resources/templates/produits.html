@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" >
+<head>
+    <meta charset="utf-8"/>
+    <title>Liste des Produits</title>
+  <link rel= "stylesheet"
+          type ="text/css"
+          href= "../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"
+    />
+    <link rel= "stylesheet"
+          type ="text/css"
+          href= "../static/css/style.css"
+          th:href="@{/css/style.css}"
+    />
+</head>
+<body>
+<div layout:fragment="content">
+
+    <header>
+        <h2>C'est votre boutique , votre chez vous </h2>
+        <button>
+            Naviguez <i class="fas fa-paper-plane"></i>
+        </button>
+    </header>
+    <section class="main">
+        <div class="cards">
+            <div class="card" th:each="p:${pageProduits.content}">
+                <img src="https://img.freepik.com/photos-gratuite/joueur-vue-laterale-jouant-ordinateur-portable_23-2149829166.jpg?size=626&ext=jpg&ga=GA1.2.1489476829.1702926849&semt=ais" alt="">
+                <div class="card-header">
+                    <h4 class="title" th:text="${p.designation}">PC Asus</h4>
+                    <h4 class="price" th:text="${p.prix + 'DT'}">1500Dt</h4>
+                </div>
+                <div class="card-body"><p>Pc gaming puissant</p></div>
+            </div>
+        </div>
+        
+    </section>
+
+</div>
+</body>
+</html>

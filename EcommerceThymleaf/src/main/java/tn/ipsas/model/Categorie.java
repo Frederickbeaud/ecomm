@@ -7,21 +7,19 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Collection;
-import java.util.Date;
 
 @Entity
+
+//Annotations Lombok
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Facture {
+public class Categorie {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dateFacture;
-    @OneToMany(mappedBy = "facture")
-    private Collection<LigneFacture> facturekignes;
-    @Transient
-    private Client client;
-    private Long clientID;
+    private String designation;
+    @OneToMany(mappedBy = "categorie")
+    private Collection<Product> products;
 }

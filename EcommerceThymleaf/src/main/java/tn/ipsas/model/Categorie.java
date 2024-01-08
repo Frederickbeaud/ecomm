@@ -20,6 +20,7 @@ public class Categorie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String designation;
-    @OneToMany(mappedBy = "categorie")
+    @OneToMany (mappedBy = "categorie" ,cascade = {CascadeType.REMOVE,
+            CascadeType.MERGE, CascadeType.PERSIST} )
     private Collection<Product> products;
 }

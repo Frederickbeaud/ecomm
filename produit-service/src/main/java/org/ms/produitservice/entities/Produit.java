@@ -20,4 +20,5 @@ public class Produit {
     private long quantity;
     private String imageUrl;
     private String description;
+    private double discount;
 }

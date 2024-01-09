@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400&family=Poppins:wght@300&display=swap');
 *{
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   /* font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: rgb(15, 13, 13);
@@ -42,6 +46,30 @@ ul a {
 ul li:hover{
     color: yellow!important;
     border-bottom: 2px solid yellow;
+}
+.btn1{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+   
+}
+.btn2{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid orange;
+    cursor: pointer;
+    color: orange;
+    margin: 10px;
 }
 .section{
     display: flex;
@@ -96,5 +124,6 @@ ul li:hover{
 }
 .section2 img{
     min-width: 200px;
+    
 
 }

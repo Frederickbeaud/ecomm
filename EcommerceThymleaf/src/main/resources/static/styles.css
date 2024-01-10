@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
    /* font-family: 'Montserrat', sans-serif;*/
+   scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 body{
@@ -108,7 +109,7 @@ ul li:hover{
     text-align: center;
     border-radius: 10px;
     width: 100px;
-    background-color: aqua;
+    background-color: orange;
     cursor: pointer;
     color: black;
     margin: 20px;
@@ -120,13 +121,177 @@ ul li:hover{
     border-radius: 10px;
     transform: scale(1);
 }
+
 .section .section2{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 150px;
 }
 .section2 img{
     min-width: 200px;
     
 
+}
+.caregorie{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    height: 500px;
+}
+.caregorie h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px;
+}
+.content-categorie {
+justify-content: start;
+gap: 20px;
+
+display: flex;
+flex-wrap: wrap;
+
+}
+.card-cat{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 220px;
+    height: 220px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.content-categorie .card-cat h2{
+    text-align: center;
+    font-size: 1.5rem;
+   font-weight: 400;
+    
+}
+.content-categorie .card-cat img{
+    object-fit: cover;
+   width: 100px;
+   height: 100px;
+}
+.best-seller{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 500px;
+}
+.best-seller h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    font-weight: 400;
+    color: orange;
+}
+.best-seller .content-best{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.best-seller
+ .card-best{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 220px;
+    height: 220px;
+    border: 2px solid orange;
+    background-color:black;
+    color: orange ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px 2px orange;
+    
+}
+.card-best img{
+    object-fit: cover;
+   width: 100px;
+   height: 100px;
+
+}
+.card-best .btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid orange;
+    cursor: pointer;
+    color: orange;
+    margin: 10px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+.contact input,.contact textarea{
+    margin: 10px ;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+
+}
+.contact input:focus,.contact textarea:focus{
+    background-color: white;
+    color: black;
+}
+.contact input{
+    width: 200px;
+    height: 30px;
+}
+textarea{
+    width: 419px;
+    height: 100px;
+}
+.contact form button{
+    margin: 10px;
+    width: 419px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid orange;
+    color: orange;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.contact h2{
+    margin-top: 10px;
 }

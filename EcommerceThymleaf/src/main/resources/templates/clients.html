@@ -6,24 +6,23 @@
   <title>Liste des Produits</title>
 </head>
 <body>
-<h3>Liste des produits</h3>
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Email</th>
-
-    <th>Action</th>
-  </thead>
-  <tbody>
-  <tr th:each="c:${client}">
-    <td th:text="${c.id}" ></td>
-    <td th:text="${c.name}" ></td>
-    <td th:text="${c.email}" ></td>
-
-  </tr>
-  </tbody>
-</table>
+<header>
+  <div class="logo">
+    <h1>LOGO</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><i class='bx bx-home' ></i><a href="/acceuil">Home</a></li>
+      <li><i class='bx bxl-product-hunt' ></i><a href="/produit">Produit</a></li>
+      <li><i class='bx bx-edit-alt' ></i></i><a href="/about">About</a></li>
+      <li><i class='bx bxs-contact' ></i><a href="#contact">Contact</a></li>
+      <li><a href="/admin">Admin</a></li>
+    </ul>
+  </nav>
+  <div >
+    <a href="" class="btn1">Login</a>
+    <a href="" class="btn2" >s'inscrire</a>
+  </div>
+</header>
 </body>
 </html>

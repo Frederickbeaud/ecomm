@@ -18,10 +18,10 @@
     <nav>
         <ul>
             <li><i class='bx bx-home' ></i><a href="/acceuil">Home</a></li>
-            <li><i class='bx bxl-product-hunt' ></i><a href="/produit">Produit</a></li>
+            <li><i class='bx bxl-product-hunt' ></i><a href="/produits/all">Produit</a></li>
             <li><i class='bx bx-edit-alt' ></i></i><a href="/about">About</a></li>
             <li><i class='bx bxs-contact' ></i><a href="#contact">Contact</a></li>
-            <li><a href="/admin">Admin</a></li>
+            <li><a href="/admin/">Admin</a></li>
         </ul>
     </nav>
     <div >
@@ -31,7 +31,7 @@
 </header>
 <div class="section">
     <div class="section1">
-        <h1>Votre Magasin chez vous!</h1>
+        <h1>Votre Magasin en un click!</h1>
         <p class="sample">Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Quae, voluptatem!</p>
         <a href="" class="btn">Voir plus </a>
     </div>
@@ -42,25 +42,11 @@
 <div class="caregorie">
     <h2>Nos Categories</h2>
     <div class="content-categorie">
-        <div class="card-cat">
-            <h2>PC</h2>
+        <div class="card-cat"  th:each="cat:${categories}" >
+            <h2 th:text="${cat.designation}"></h2>
             <img src="sample.png" alt="">
         </div>
-        <div class="card-cat">
-            <h2>Gamer</h2>
-            <img src="sample.png" alt="">
-        </div>
-        <div class="card-cat">
-            <h2>Casque</h2>
-            <img src="sample.png" alt="">
-        </div>
-        <div class="card-cat">
-            <h2>Clavier</h2>
-            <img src="sample.png" alt="">
-        </div> <div class="card-cat">
-            <h2>PC</h2>
-            <img src="sample.png" alt="">
-        </div>
+        
     </div>
 
 </div>
@@ -114,7 +100,15 @@
     </form>
 </div>
 <footer>
-    
+    <div class="contact-footer">
+        <h1>LOGO</h1>
+        <ul>
+            <li><span><i class='bx bxl-facebook' ></i></span></li>
+            <li><span><i class='bx bxl-twitter' ></i></span></li>
+            <li><span><i class='bx bxl-instagram' ></i></span></li>
+        </ul>    
+    </div>
+    <div class="copy"> <i class='bx bx-copyright'></i> Ipsas 2024</div>
 </footer>
 </body>
 </html>

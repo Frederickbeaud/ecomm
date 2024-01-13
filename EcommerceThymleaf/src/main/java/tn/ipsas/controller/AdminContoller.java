@@ -14,15 +14,21 @@ import tn.ipsas.repository.ProductRepository;
 import java.util.Collection;
 
 @Controller // pour déclarer un contrôleur
-@RequestMapping(value = "/admin") @AllArgsConstructor
+@AllArgsConstructor
 
 public class AdminContoller {
     private ProductRepository prodReposirory;
     private ClientReposirory clientReposirory;
     private CategorieRepository categorieReposirory;
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/admin")
     public String admin(){
         return "login";
+    }
+    @RequestMapping(value = "/")
+    public String acceuil(Model model){
+        Collection<Categorie> cats = categorieReposirory.findAll();
+        model.addAttribute("categories",cats);
+        return "Accuil";
     }
     @RequestMapping(value = "/clients")
     public String client(Model model){
@@ -36,7 +42,7 @@ public class AdminContoller {
         model.addAttribute("produits",produits);
         return "produitsPanel";
     }
-    @RequestMapping(value = "/categorie")
+    @RequestMapping(value = "categorie")
     public String categorie(Model model){
         Collection<Categorie> categories = categorieReposirory.findAll();
         model.addAttribute("categories",categories);

@@ -17,7 +17,7 @@ public class HomeController {
         this.categorieRepository = categorieRepository;
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/home")
     public String acceuil(Model model){
         Collection<Categorie> cats = categorieRepository.findAll();
         model.addAttribute("categories",cats);
